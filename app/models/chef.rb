@@ -1,4 +1,5 @@
 class Chef < ActiveRecord::Base
+    has_many :recipes
     
     ## Validations
     validates :chefname, 

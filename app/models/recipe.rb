@@ -1,5 +1,8 @@
 class Recipe < ActiveRecord::Base
+  belongs_to :chef
+  
   ## Validations
+ validates :chef_id, presence: true
  validates :name, presence: true, 
                   length: {minimum: 5, maximum:100}
                   
