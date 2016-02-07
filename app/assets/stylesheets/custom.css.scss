@@ -29,7 +29,10 @@ ul.navbar-nav{
 }
 
 body {
-    padding-top: 100px;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
 }
 
 .nav-item{
@@ -63,4 +66,12 @@ h1 {
     margin-top: 25px;
     border-top : 1px solid #eaeaea;
     color: #e2e2e2;
+}
+
+.chef-info {
+    margin-top: 20px;
+}
+
+.gravatar {
+    border-radius: 20px;
 }

@@ -1,0 +1,30 @@
+<h1>All Recipes</h1>
+<hr/>
+
+<% @recipes.each do |recipe| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="chef-info center">
+        <%= gravatar_for recipe.chef size: 100%>
+        <h5>Chef name: <%= recipe.chef.chefname%></h5>
+      </section>
+    </div>
+    <div class="col-lg-8">
+      <div class="card">
+        <h4 class="card-header">
+           <%= link_to recipe.name.upcase, " "%></h4>
+        <div class="card-block">
+          <p class="card-text"><%= recipe.summary %>
+            
+          </p>  
+        </div>
+        <div class="card-footer text-muted">
+          <span>
+              <small>updated <%= time_ago_in_words(recipe.created_at) %> ago</small>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+<% end %>
