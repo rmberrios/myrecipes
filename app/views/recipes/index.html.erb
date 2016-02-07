@@ -12,7 +12,7 @@
     <div class="col-lg-8">
       <div class="card">
         <h4 class="card-header">
-           <%= link_to recipe.name.upcase, " "%></h4>
+           <%= link_to recipe.name.upcase, recipe_path(recipe)%></h4>
         <div class="card-block">
           <p class="card-text"><%= recipe.summary %>
             
