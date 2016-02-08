@@ -1,6 +1,4 @@
-<h1>All Recipes</h1><%=link_to 'Create new recipe', new_recipe_path, class: 'btn btn-success'%>
-<hr/>
-
+<%= render 'shared/page_title', title: 'All Recipes' %>
 <% @recipes.each do |recipe| %>
   <div class="row">
     <div class="col-md-2">
