@@ -19,3 +19,6 @@
 # Ignore all cloud9 and hidden files
 .c9/
 
+# Ignore Files uploaded 
+/public/uploads/*
+

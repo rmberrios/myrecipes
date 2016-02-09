@@ -2,6 +2,9 @@ Recipe APP
 ----------
 
 **Enjoy chef, recipes all in one Place :D** 
+## Dependecies
+Make sure to install imagemagick
+`sudo apt-get install imagemagick --fix-missing`
 
 ## Run it on C9
 `rails server -b $IP -p $PORT`

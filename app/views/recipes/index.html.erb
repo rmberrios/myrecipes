@@ -7,7 +7,7 @@
         <h5>Chef name: <%= recipe.chef.chefname%></h5>
       </section>
     </div>
-    <div class="col-lg-8">
+    <div class="col-md-6">
       <div class="card">
         <h4 class="card-header">
            <%= link_to recipe.name.upcase, recipe_path(recipe)%></h4>
@@ -22,6 +22,9 @@
             </span>
         </div>
       </div>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag(recipe.picture.url, size: "250x150", class:"gravatar") if recipe.picture? %>
     </div>
   </div>
   <hr/>
