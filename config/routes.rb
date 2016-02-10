@@ -9,10 +9,17 @@ Rails.application.routes.draw do
   get '/recipes/:id/edit', to: 'recipes#edit', as: 'edit_recipe'
   patch '/recipes/:id', to: 'recipes#update'
   get '/recipes/:id', to: 'recipes#show', as: 'recipe'
+  post '/recipes/:id/like', to: 'recipes#like', as: 'like_recipe'
   
   
   # delete '/recipes/:id', to: 'recipes#destroy'
   
   ## all the code above can be compress into 
-  # resources :recipes
+  # resources :recipes do
+  #   member do
+  #     post 'like'
+  #   end
+  # end
+  
+  
 end
