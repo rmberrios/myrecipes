@@ -21,5 +21,11 @@ Rails.application.routes.draw do
   #   end
   # end
   
+  ### Chef Routes
+  
+  resources :chefs, except: [:new]
+  
+  get '/register', to: 'chefs#new'
+  
   
 end

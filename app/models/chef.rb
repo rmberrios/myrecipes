@@ -18,4 +18,5 @@ class Chef < ActiveRecord::Base
     # make sure before it save the email, should be downcase
     before_save {self.email = email.downcase}
     
+    has_secure_password
 end
