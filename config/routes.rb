@@ -22,10 +22,12 @@ Rails.application.routes.draw do
   # end
   
   ### Chef Routes
-  
   resources :chefs, except: [:new]
-  
   get '/register', to: 'chefs#new'
   
+  ## Login User/Chef Logout User/Chef
+  get '/login', to:"logins#new"
+  post '/login', to: "logins#create"
+  get '/logout', to: "logins#destroy"
   
 end
