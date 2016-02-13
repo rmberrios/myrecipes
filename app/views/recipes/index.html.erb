@@ -1,6 +1,18 @@
 <%= render 'shared/page_title', title: 'All Recipes' %>
 
-<%= will_paginate %>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to "Recipes", recipes_path, class: "nav-link active" %>
+  </li>
+  <li class="nav nav-item">
+    <%= link_to "Chefs", chefs_path, class: "nav-link" %>
+  </li>
+</ul>
+<div class="row">
+  <div class="col-md-12">
+    <%= will_paginate %>
+  </div>
+</div>
 <% @recipes.each do |recipe| %>
   <div class="row">
     <div class="col-md-2">
