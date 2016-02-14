@@ -18,7 +18,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'bcrypt', '3.1.7'
-gem 'fog', '1.23.0'
+gem 'fog', '1.37.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
