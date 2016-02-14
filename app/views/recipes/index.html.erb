@@ -1,0 +1,56 @@
+<%= render 'shared/page_title', title: 'All Recipes' %>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <%= link_to "Recipes", recipes_path, class: "nav-link active" %>
+  </li>
+  <li class="nav nav-item">
+    <%= link_to "Chefs", chefs_path, class: "nav-link" %>
+  </li>
+</ul>
+<div class="row">
+  <div class="col-md-12">
+    <%= will_paginate %>
+  </div>
+</div>
+<% @recipes.each do |recipe| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="chef-info center">
+        <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef)%>
+        <h5>Chef name: <%= recipe.chef.chefname%></h5>
+      </section>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <h4 class="card-header">
+           <%= link_to recipe.name.upcase, recipe_path(recipe)%></h4>
+        <div class="card-block">
+          <p class="card-text"><%= recipe.summary %>
+            
+          </p>  
+        </div>
+        <div class="card-footer text-muted">
+          <span>
+            <small>Created: <%= time_ago_in_words(recipe.created_at) %> ago,</small>
+              <small>Updated: <%= time_ago_in_words(recipe.updated_at) %> ago</small>
+            </span>
+        </div>
+        <div class="pull-right">
+          <%= link_to like_recipe_path(recipe, like: true), method: :post do %>
+           <%= icon('thumbs-o-up') %> &nbsp <%= recipe.thumbs_up_total %>
+          <% end %> &nbsp&nbsp&nbsp&nbsp
+           <%= link_to like_recipe_path(recipe, like: false), method: :post do %>
+            <%= icon('thumbs-o-down') %> &nbsp <%= recipe.thumbs_down_total %>
+          <% end %>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag(recipe.picture.url, size: "250x150", class:"gravatar") if recipe.picture? %>
+    </div>
+  </div>
+  <hr/>
+<% end %>
+
+<%= will_paginate %>

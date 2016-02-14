@@ -1,24 +1,31 @@
+Recipe APP
+----------
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+**Enjoy chef, recipes all in one Place :D** 
+## Dependecies
+Make sure to install imagemagick
+`sudo apt-get install imagemagick --fix-missing`
 
+## Run it on C9
+`rails server -b $IP -p $PORT`
+Then you can check it at [cloud9](https://udemy-recipemanager-tony09.c9users.io/)
 
-Welcome to your Rails project on Cloud9 IDE!
+## Demo
+Check out the [demo hosted by heroku](http://kaiman-myrecipes.herokuapp.com/)
 
-To get started, just do the following:
+## Team
+* Rommel Berrios (rommel.berrios93@gmail.com)
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://udemy-recipemanager-tony09.c9users.io/).
+## Changelog
+### 0.0.1
+* Add features create, edit, index, show recipes
+* Add features register, edit, update, show chefs
+* Add restrictions for non-auth links
+* Add AWS S3 for upload images
 
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+## Thanks
+Specials thanks to:
+* Udemy: Search for courses
+* Cloud9: Online IDE
+* Github: Git repository hosting service
+* Heroku: Cloud Platform-as-a-Service (PaaS)
