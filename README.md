@@ -16,10 +16,16 @@ Check out the [demo hosted by heroku](http://kaiman-myrecipes.herokuapp.com/)
 ## Team
 * Rommel Berrios (rommel.berrios93@gmail.com)
 
+## Changelog
+### 0.0.1
+* Add features create, edit, index, show recipes
+* Add features register, edit, update, show chefs
+* Add restrictions for non-auth links
+* Add AWS S3 for upload images
+
 ## Thanks
 Specials thanks to:
 * Udemy: Search for courses
 * Cloud9: Online IDE
 * Github: Git repository hosting service
 * Heroku: Cloud Platform-as-a-Service (PaaS)
-
