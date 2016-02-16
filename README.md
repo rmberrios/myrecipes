@@ -17,6 +17,10 @@ Check out the [demo hosted by heroku](http://kaiman-myrecipes.herokuapp.com/)
 * Rommel Berrios (rommel.berrios93@gmail.com)
 
 ## Changelog
+
+### 0.0.3
+* Fix bugs on productions links
+
 ### 0.0.1
 * Add features create, edit, index, show recipes
 * Add features register, edit, update, show chefs
