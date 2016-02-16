@@ -125,3 +125,15 @@ span.picture{
 .show-recipe {
     margin: 10px;
 }
+
+form.like-recipe {
+    display: inline-block;
+    button {
+        background: none;
+        border: none;
+        color: #0275d8;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
