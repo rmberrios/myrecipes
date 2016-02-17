@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: 'All Recipes' %>
+<%= render 'shared/page_title', title: "Recipes for : " + @style.name+ ' food' %>
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
@@ -10,7 +10,7 @@
 </ul>
 <div class="row">
   <div class="col-md-12">
-    <%= will_paginate %>
+    <%= will_paginate @recipes %>
   </div>
 </div>
 <% @recipes.each do |recipe| %>
@@ -27,12 +27,8 @@
            <%= link_to recipe.name.upcase, recipe_path(recipe)%></h4>
         <div class="card-block">
           <p class="card-text"><%= recipe.summary %></p>  
-          <% if recipe.styles.any? %>
-            <p>Style: <%= render recipe.styles %></p>
-          <% end %>
-          <% if recipe.ingredients.any? %>
-            <p>Ingredients: <%= render recipe.ingredients %></p>
-          <% end %>            
+          <p>Style: <%= render recipe.styles %></p>
+          <p>Ingredients: <%= render recipe.ingredients %></p>
         </div>
         <div class="card-footer text-muted">
           <span>
@@ -57,4 +53,4 @@
   <hr/>
 <% end %>
 
-<%= will_paginate %>
+<%= will_paginate @recipes%>
