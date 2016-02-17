@@ -23,7 +23,6 @@ $navbar-default-bg: #803E15;
 
 ul.navbar-nav{
     float:right;
-    padding: 15px;
     
     ul{
        list-style:none;
@@ -32,7 +31,7 @@ ul.navbar-nav{
     li {
         //margin-left: 10px;
         //margin-top: 30px;
-        padding: 0px, 0px, 10px, 0px;
+        padding: 10px;
     }
     
     li.dropdown-divider{
