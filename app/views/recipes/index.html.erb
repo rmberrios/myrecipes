@@ -27,8 +27,12 @@
            <%= link_to recipe.name.upcase, recipe_path(recipe)%></h4>
         <div class="card-block">
           <p class="card-text"><%= recipe.summary %></p>  
-          <p>Style: <%= render recipe.styles %></p>
-          <p>Ingredients: <%= render recipe.ingredients %></p>
+          <% if recipe.styles.any? %>
+            <p>Style: <%= render recipe.styles %></p>
+          <% end %>
+          <% if recipe.ingredients.any? %>
+            <p>Ingredients: <%= render recipe.ingredients %></p>
+          <% end %>            
         </div>
         <div class="card-footer text-muted">
           <span>
