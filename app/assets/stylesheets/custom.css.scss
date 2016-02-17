@@ -57,7 +57,12 @@ body {
         border: none;
         border-bottom: 3px dotted;
     }
+    
+    &.top{
+       padding-left: 0px;
+    }
 }
+
 
 .center{
     text-align: center;
@@ -98,6 +103,10 @@ h1 {
     padding: 15px;
     border: 1px solid #d2d2d2;
     
+}
+
+.input-checkbox {
+    width: auto !important;
 }
 
 input, textarea, select, .uneditable-input {
