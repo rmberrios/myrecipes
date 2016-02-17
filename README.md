@@ -18,6 +18,11 @@ Check out the [demo hosted by heroku](http://kaiman-myrecipes.herokuapp.com/)
 
 ## Changelog
 
+### 0.0.4
+* Add feature create new Styles and Ingredients
+* Set New and Edit Recipe to add Styles and Ingredients
+* Fix stylesheets for PC Browser
+
 ### 0.0.3
 * Fix bugs on productions links
 
