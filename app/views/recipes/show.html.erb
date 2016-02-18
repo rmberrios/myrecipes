@@ -8,9 +8,15 @@
     </p>
   </div>
   <div class="col-md-pull-4 col-md-8">
-    <% if logged_in? and @recipe.chef == current_user %>
+    <% if logged_in? and (@recipe.chef == current_user || current_user.admin?) %>
       <%= link_to "Edit this recipe", edit_recipe_path(@recipe),
         {class:"btn btn-success pull-right", id:"edit-recipe"} %>
+    <% end %>
+    
+    <% if current_user.admin? %>
+      <%= button_to @recipe, {method: :delete, form_class: 'like-recipe', data: { confirm: "Are you sure?"}} do %>
+         <%= icon('trash-o') %> Delete Recipe
+      <% end %>
     <% end %>
     <h3><%= @recipe.summary%></h3>
     <div class="show_recipe">
@@ -18,10 +24,10 @@
     </div>
     <div class="well">
       <% if @recipe.styles.any? %>
-            <p>Style: <%= render recipe.styles %></p>
+            <p>Style: <%= render @recipe.styles %></p>
           <% end %>
           <% if @recipe.ingredients.any? %>
-            <p>Ingredients: <%= render recipe.ingredients %></p>
+            <p>Ingredients: <%= render @recipe.ingredients %></p>
           <% end %>  
           
       <p><strong>Steps:</strong></p>

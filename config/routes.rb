@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   patch '/recipes/:id', to: 'recipes#update'
   get '/recipes/:id', to: 'recipes#show', as: 'recipe'
   post '/recipes/:id/like', to: 'recipes#like', as: 'like_recipe'
+  delete 'recipes/:id', to: 'recipes#destroy'
   
   
   # delete '/recipes/:id', to: 'recipes#destroy'
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
   # end
   
   ### Chef Routes
-  resources :chefs, except: [:new]
+  resources :chefs, except: [:new, :destroy]
   get '/register', to: 'chefs#new'
   
   ## Login User/Chef Logout User/Chef
