@@ -34,3 +34,8 @@ email: string
 - email must be present
 - email must be unique (since we'll use this for login later)
 - email must be valid
+
+Admins:
+- Create Admin functionality
+- An Admin should be able to delete a recipe
+- An Admin should be able to update a recipe
