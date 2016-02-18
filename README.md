@@ -18,6 +18,9 @@ Check out the [demo hosted by heroku](http://kaiman-myrecipes.herokuapp.com/)
 
 ## Changelog
 
+### 0.0.6
+* Add Admin Functionality
+
 ### 0.0.4
 * Add feature create new Styles and Ingredients
 * Set New and Edit Recipe to add Styles and Ingredients
