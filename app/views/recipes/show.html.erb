@@ -45,4 +45,47 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-8">
+    <h4>Comments for this recipe</h4>
+  </div>
+   <div class=" col-md-8">
+     
+     <% if logged_in? %>
+      <%= form_for @comment do |f| %>
+        <%= f.label "Leave your comment..." %>
+        <%= f.text_area :body %>
+        
+        <%= f.submit 'Comment it!', class: 'btn btn-success' %>
+      <% end %>
+      <% else %>
+        <span>Leave your comment by <%= link_to 'Log in!', login_path%></span>
+      <% end %>
+  </div>
+</div>
+
+<% if @comments.any? %>
+
+  <% @comments.each do |comment| %>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="comment-section">
+          <div class="comment-image">
+            <%= link_to gravatar_for(comment.chef, size: 50), chef_path(comment.chef)%>
+          </div>
+          <div class="comment-info">
+            <%= link_to comment.chef.chefname, chef_path(comment.chef)%>
+            <p><%= comment.body %></p>    
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+      </div>
+    </div>
+  <% end %>
+  <%= will_paginate @comments%>
+
+<% else %>
+  <h4> No hay comentarios disponibles</h4>
+<% end %>
 <h5><%= link_to "Return to Recipes Listing", recipes_path, class:"btn btn-warning btn-small"%></h5>

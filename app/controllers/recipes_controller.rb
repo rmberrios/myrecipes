@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:edit, :update, :show, :like]
   before_action :require_user, except: [:show, :index, :like]
-  before_action :require_user_like, only:[:like]
+  before_action :require_user_back, only:[:like]
   before_action :require_same_user, only:[:edit, :update]
   before_action :admin_user, only: :destroy
   
@@ -10,8 +10,8 @@ class RecipesController < ApplicationController
   end
   
   def show
-    # Stop server and check pry
-    # binding.pry
+    @comments = @recipe.comments.paginate(page:params[:page], per_page: 4)
+    @comment = Comment.new
   end
   
   def new
