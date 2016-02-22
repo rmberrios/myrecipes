@@ -36,4 +36,9 @@ Rails.application.routes.draw do
   
   ## Ingredients Routes
   resources :ingredients, only: [:new, :create, :show]
+  
+  #a# Comment Routes
+  #resources :comments, only: [:new, :create, :show]
+  post '/recipes/:id/comments', to: 'comments#create', as: 'comments'
+  
 end
