@@ -18,6 +18,13 @@ Check out the [demo hosted by heroku](http://kaiman-myrecipes.herokuapp.com/)
 
 ## Changelog
 
+### 0.0.8
+* Add feature create comments for recipes
+* List comments for recipes
+* Display comments count for recipes index
+* Fix Pagination style
+
+
 ### 0.0.6
 * Add Admin Functionality
 
