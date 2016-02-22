@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def require_user_like
+  def require_user_back
     if !logged_in? 
       flash[:danger] = "You must be logged in to perform that action"
       redirect_to :back

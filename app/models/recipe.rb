@@ -5,6 +5,7 @@ class Recipe < ActiveRecord::Base
   has_many :styles, through: :recipe_styles
   has_many :recipe_ingredients, dependent: :destroy
   has_many :ingredients, through: :recipe_ingredients
+  has_many :comments
   
   ## Validations
  validates :chef_id, presence: true

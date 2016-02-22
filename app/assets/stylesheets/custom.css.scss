@@ -146,3 +146,44 @@ form.like-recipe {
         }
     }
 }
+
+.comment-section{
+    display: inline-flex;
+    
+    .comment-image {
+        
+    }
+    
+    .comment-info {
+        margin-left: 10px;
+        small{
+            color: #e2e2e2;
+        }
+    }
+}
+
+.chef-recipe{
+    margin-top: 36px;
+}
+
+ul.pagination{
+    list-style-type:none;
+    li {
+        
+        display: inline;
+        a{  
+            margin-left: 0;
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+            position: relative;
+            float: left;
+            padding: .5rem .75rem;
+            margin-left: -1px;
+            line-height: 1.5;
+            color: #0275d8;
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+    }
+}

@@ -39,6 +39,9 @@
             <small>Created: <%= time_ago_in_words(recipe.created_at) %> ago,</small>
               <small>Updated: <%= time_ago_in_words(recipe.updated_at) %> ago</small>
             </span>
+            <% if recipe.comments.any? %>
+              <div><small><%= recipe.comments.count %> Comments for this recipe</small></div>
+            <% end %>
         </div>
         <div class="pull-right">
           <%= button_to like_recipe_path(recipe, like: true), {method: :post, form_class: 'like-recipe'} do %>
